@@ -15,16 +15,17 @@
     -# %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
     -# %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
     -# %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
-    %link{:href => "assets/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "assets/bootstrap-responsive.min.css", :rel => "stylesheet"}/
-    %link{:href => "assets/fullcalendar.css", :rel => "stylesheet"}/
-    %link{:href => "assets/unicorn.main.css", :rel => "stylesheet"}/
+    %link{:href => "/assets/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "/assets/bootstrap-responsive.min.css", :rel => "stylesheet"}/
+    %link{:href => "/assets/fullcalendar.css", :rel => "stylesheet"}/
+    %link{:href => "/assets/unicorn.main.css", :rel => "stylesheet"}/
+    %link{:href => "/assets/base.css", :rel => "stylesheet"}/
     %link(href="favicon.ico" rel="shortcut icon")
     %link.skin-color{:href => "/assets/unicorn.red.css", :rel => "stylesheet"}
   %body
     #header
       %h1
-        %a{:href => "./dashboard.html"} Gimika
+        %a{:href => "/"} Gimika
     #user-nav.navbar.navbar-inverse
       %ul.nav.btn-group
         %li.btn.btn-inverse
@@ -32,55 +33,9 @@
             %i.icon.icon-user
             %span.text Profile
     #sidebar
-      %a.visible-phone{:href => "#"}
-        %i.icon.icon-home
-        Dashboard
-      %ul
-        %li.active
-          %a{:href => "index.html"}
-            %i.icon.icon-home
-            %span Dashboard
-        %li.submenu
-          %a{:href => "#"}
-            %i.icon.icon-th-list
-            %span Form elements
-            %span.label 3
-          %ul
-            %li
-              %a{:href => "form-common.html"} Common elements
-            %li
-              %a{:href => "form-validation.html"} Validation
-            %li
-              %a{:href => "form-wizard.html"} Wizard
+      = render :partial => "layouts/sidebar"
     #content
-      #content-header
-        %h1 Dashboard
-        .btn-group
-          %a.btn.btn-large.tip-bottom{:title => "Manage Files"}
-            %i.icon-file
-          %a.btn.btn-large.tip-bottom{:title => "Manage Users"}
-            %i.icon-user
-          %a.btn.btn-large.tip-bottom{:title => "Manage Comments"}
-            %i.icon-comment
-            %span.label.label-important 5
-          %a.btn.btn-large.tip-bottom{:title => "Manage Orders"}
-            %i.icon-shopping-cart
-      #breadcrumb
-        %a.tip-bottom{:href => "#", :title => "Go to Home"}
-          %i.icon-home
-          Home
-        %a.current{:href => "#"} Dashboard
-      .container-fluid
-        .row-fluid
-          .span12.center{:style => "text-align: center;"}
-            %ul.stat-boxes
-              %li
-                .left.peity_bar_good
-                  %span> 2,4,9,7,12,10,12
-                  +20%
-                .right
-                  %strong 36094
-                  Visits
+      = yield
     -# .navbar.navbar-fixed-top
     -#   .navbar-inner
     -#     .container
@@ -118,14 +73,14 @@
       Javascripts
       \==================================================
     / Placed at the end of the document so the pages load faster
-    %script{:src => "assets/excanvas.min.js"}
-    %script{:src => "assets/jquery.min.js"}
-    %script{:src => "assets/jquery.ui.custom.js"}
-    %script{:src => "assets/bootstrap.min.js"}
-    %script{:src => "assets/jquery.flot.min.js"}
-    %script{:src => "assets/jquery.flot.resize.min.js"}
-    %script{:src => "assets/jquery.peity.min.js"}
-    %script{:src => "assets/fullcalendar.min.js"}
-    %script{:src => "assets/unicorn.js"}
-    %script{:src => "assets/unicorn.dashboard.js"}
+    %script{:src => "/assets/excanvas.min.js"}
+    %script{:src => "/assets/jquery.min.js"}
+    %script{:src => "/assets/jquery.ui.custom.js"}
+    %script{:src => "/assets/bootstrap.min.js"}
+    %script{:src => "/assets/jquery.flot.min.js"}
+    %script{:src => "/assets/jquery.flot.resize.min.js"}
+    %script{:src => "/assets/jquery.peity.min.js"}
+    %script{:src => "/assets/fullcalendar.min.js"}
+    %script{:src => "/assets/unicorn.js"}
+    %script{:src => "/assets/unicorn.dashboard.js"}
     -# = javascript_include_tag "application"

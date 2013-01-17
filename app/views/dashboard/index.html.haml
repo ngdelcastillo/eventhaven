@@ -1,0 +1,28 @@
+#content-header
+  %h1 Dashboard
+  .btn-group
+    %a.btn.btn-large.tip-bottom{:title => "Manage Files"}
+      %i.icon-file
+    %a.btn.btn-large.tip-bottom{:title => "Manage Users"}
+      %i.icon-user
+    %a.btn.btn-large.tip-bottom{:title => "Manage Comments"}
+      %i.icon-comment
+      %span.label.label-important 5
+    %a.btn.btn-large.tip-bottom{:title => "Manage Orders"}
+      %i.icon-shopping-cart
+#breadcrumb
+  %a.tip-bottom{:href => "#", :title => "Go to Home"}
+    %i.icon-home
+    Home
+  %a.current{:href => "#"} Dashboard
+.container-fluid
+  .row-fluid
+    .span12.center{:style => "text-align: center;"}
+      %ul.stat-boxes
+        %li
+          .left.peity_bar_good
+            %span> 2,4,9,7,12,10,12
+            +20%
+          .right
+            %strong 36094
+            Visits

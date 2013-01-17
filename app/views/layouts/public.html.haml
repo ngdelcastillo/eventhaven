@@ -1,0 +1,434 @@
+!!!
+%html{:lang => "en"}
+  %head
+    / start: Meta
+    %meta{:charset => "utf-8"}
+      %title Gimika
+      -# %meta{:content => "Smart Bootstrap Theme", :name => "description"}/
+      -# %meta{:content => "Template, Theme, web, html5, css3, Bootstrap", :name => "keywords"}/
+      -# %meta{:content => "Łukasz Holeczek from creativeLabs", :name => "author"}/
+      / end: Meta
+      / start: Mobile Specific
+      %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+        / end: Mobile Specific
+        / start: Facebook Open Graph
+        %meta{:content => "", :property => "og:title"}/
+        %meta{:content => "", :property => "og:description"}/
+        %meta{:content => "", :property => "og:type"}/
+        %meta{:content => "", :property => "og:url"}/
+        %meta{:content => "", :property => "og:image"}/
+        / end: Facebook Open Graph
+        / start: CSS
+        %link{:href => "/assets/smart/bootstrap.css", :rel => "stylesheet"}
+          %link{:href => "/assets/smart/bootstrap-responsive.css", :rel => "stylesheet"}
+            %link{:href => "/assets/smart/style.css", :rel => "stylesheet"}
+              %link{:href => "/assets/smart/parallax-slider.css", :rel => "stylesheet"}
+                %link{:href => "http://fonts.googleapis.com/css?family=Droid+Sans:400,700", :rel => "stylesheet", :type => "text/css"}
+                  %link{:href => "http://fonts.googleapis.com/css?family=Droid+Serif", :rel => "stylesheet", :type => "text/css"}
+                    %link{:href => "http://fonts.googleapis.com/css?family=Boogaloo", :rel => "stylesheet", :type => "text/css"}
+                      %link{:href => "http://fonts.googleapis.com/css?family=Economica:700,400italic", :rel => "stylesheet", :type => "text/css"}
+                        / end: CSS
+                        / Le HTML5 shim, for IE6-8 support of HTML5 elements
+                        /[if lt IE 9]
+                          <script src="http://html5shim.googlecode.com/svn/trunk/html5./assets/smart"></script>
+                        /[if IE 9]
+                          <link href="/assets/smart/styleie9.css" rel="stylesheet">
+  %body
+    / start: Header
+    %header
+      / start: Container
+      .container
+        / start: Navbar
+        .navbar.navbar-inverse
+          .navbar-inner
+            %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.brand{:href => "index.html"}
+              %i.ico-charts.circle>
+              Sma
+              %span> rt
+              \.
+            .nav-collapse.collapse
+              %ul.nav
+                %li.active.dropdown
+                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    Home
+                    %b.caret
+                  %ul.dropdown-menu
+                    %li
+                      %a{:href => "index.html"} Home standard
+                    %li
+                      %a{:href => "index2.html"} Home alternative
+                    %li
+                      %a{:href => "index3.html"} Home alternative 2
+                    %li
+                      %a{:href => "index4.html"} Home alternative 3
+                %li
+                  %a{:href => "about.html"} About
+                %li.dropdown
+                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    Features
+                    %b.caret
+                  %ul.dropdown-menu
+                    %li
+                      %a{:href => "social-icons.html"} Social Icons
+                    %li
+                      %a{:href => "icons.html"} Icons
+                    %li
+                      %a{:href => "sliders.html"} Sliders
+                    %li
+                      %a{:href => "typography.html"} Typography
+                    %li
+                      %a{:href => "shortcodes.html"} Shortcodes
+                    %li
+                      %a{:href => "list-styles.html"} List Styles
+                %li.dropdown
+                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    Portfolio
+                    %b.caret
+                  %ul.dropdown-menu
+                    %li
+                      %a{:href => "portfolio3.html"} 3 Columns
+                    %li
+                      %a{:href => "portfolio4.html"} 4 Columns
+                %li
+                  %a{:href => "services.html"} Services
+                %li
+                  %a{:href => "pricing.html"} Pricing
+                %li
+                  %a{:href => "blog.html"} Blog
+                %li
+                  %a{:href => "contact.html"} Contact
+        / end: Navbar
+      / end: Container
+    / end: Header
+    / start: Slider
+    .slider-wrapper
+      #da-slider.da-slider
+        .da-slide
+          %h2 Twitter Bootstrap
+          %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          %a.da-link{:href => "#"} Read more
+          .da-img
+            %img{:alt => "image01", :src => "/assets/img/parallax-slider/twitter.png"}/
+        .da-slide
+          %h2 Responsive Design
+          %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          %a.da-link{:href => "#"} Read more
+          .da-img
+            %img{:alt => "image02", :src => "/assets/img/parallax-slider/responsive.png"}/
+        .da-slide
+          %h2 HTML5
+          %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          %a.da-link{:href => "#"} Read more
+          .da-img
+            %img{:alt => "image03", :src => "/assets/img/parallax-slider/html5.png"}/
+        .da-slide
+          %h2 CSS3
+          %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          %a.da-link{:href => "#"} Read more
+          .da-img
+            %img{:alt => "image04", :src => "/assets/img/parallax-slider/css3.png"}/
+        %nav.da-arrows
+          %span.da-arrows-prev
+          %span.da-arrows-next
+    / end: Slider
+    / start: Wrapper
+    #wrapper
+      / start: Container
+      .container
+        %hr
+          / start: Hero Unit - Main hero unit for a primary marketing message or call to action
+          .hero-unit
+            %h3
+              Smart is incredibly responsive, with a refreshingly clean responsive design and it has some awesome features, panorama sliders, 100+ icons, 50+ social icons, fancybox, isotope, google maps, facebook open graph and many, many more!
+            %p
+              %a.btn.btn-primary.btn-large Learn more »
+          / end: Hero Unit
+          %hr
+            / start: Row
+            .row
+              / start: Icon Boxes
+              .icons-box-vert-container
+                / start: Icon Box Start
+                .span4
+                  .icons-box-vert
+                    %i.ico-ok.ico-white.circle-color-full
+                    .icons-box-vert-info
+                      %h3 Easy to use
+                      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    .clear
+                / end: Icon Box
+                / start: Icon Box Start
+                .span4
+                  .icons-box-vert
+                    %i.ico-cup.ico-white.circle-color-full
+                    .icons-box-vert-info
+                      %h3 Best choice
+                      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    .clear
+                / end: Icon Box
+                / start: Icon Box Start
+                .span4
+                  .icons-box-vert
+                    %i.ico-ipad.ico-white.circle-color-full
+                    .icons-box-vert-info
+                      %h3 Fully Responsive
+                      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    .clear
+                / end: Icon Box
+              / end: Icon Boxes
+              .clear
+            / end: Row
+            %hr
+              / start: Row
+              .row
+                .span9
+                  .title
+                    %h3 Latest Works
+                  / start: Row
+                  .row
+                    .span3
+                      .picture
+                        %a{:href => "/assets/img/car.jpg", :rel => "image", :title => "mobile app"}
+                          %img{:src => "/assets/img/car.jpg"}
+                            .image-overlay-zoom
+                      .item-description
+                        %h4
+                          %a{:href => "#"} Mobile App
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    .span3
+                      .picture
+                        %a{:href => "project.html"}
+                          %img{:src => "/assets/img/web_app1.jpg"}
+                            .image-overlay-link
+                      .item-description
+                        %h4
+                          %a{:href => "#"} Mobile App
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    .span3
+                      .picture
+                        %a{:href => "/assets/img/mobile_app1.jpg", :rel => "image", :title => "mobile app"}
+                          %img{:src => "/assets/img/mobile_app1.jpg"}
+                            .image-overlay-zoom
+                      .item-description
+                        %h4
+                          %a{:href => "#"} Mobile App
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  / end: Row
+                .span3
+                  / start: Testimonials
+                  .testimonial-container
+                    .title
+                      %h3 What Client’s Say
+                    .testimonials-carousel{"data-autorotate" => "3000"}
+                      %ul.carousel
+                        %li.testimonial
+                          .testimonials Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                          .testimonials-bg
+                          .testimonials-author
+                            Lucas Luck,
+                            %span CEO
+                        %li.testimonial
+                          .testimonials Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                          .testimonials-bg
+                          .testimonials-author
+                            Lucas Luck,
+                            %span CTO
+                        %li.testimonial
+                          .testimonials Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                          .testimonials-bg
+                          .testimonials-author
+                            Lucas Luck,
+                            %span COO
+                        %li.testimonial
+                          .testimonials Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                          .testimonials-bg
+                          .testimonials-author
+                            Lucas Luck,
+                            %span CMO
+                  / end: Testimonials
+              / end: Row
+              %hr
+                / start Clients List
+                .clients-carousel
+                  %ul.slides.clients
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/1.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/2.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/3.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/4.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/5.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/6.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/7.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/8.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/9.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/10.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/1.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/2.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/3.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/4.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/5.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/6.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/7.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/8.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/9.png"}/
+                    %li
+                      %img{:alt => "", :src => "/assets/img/logos/10.png"}/
+                / end Clients List
+                %hr
+      / end: Container
+    / end: Wrapper
+    / start: Footer Menu
+    #footer-menu.hidden-tablet.hidden-phone
+      / start: Container
+      .container
+        / start: Row
+        .row
+          / start: Footer Menu Logo
+          .span2
+            #footer-menu-logo
+              #logo-chart
+              %a.brand{:href => "#"}
+                Sma
+                %span> rt
+                \.
+          / end: Footer Menu Logo
+          / start: Footer Menu Links
+          .span9
+            #footer-menu-links
+              %ul#footer-nav
+                %li
+                  %a{:href => "index.html"} Start
+                %li
+                  %a{:href => "about.html"} About
+                %li
+                  %a{:href => "services.html"} Services
+                %li
+                  %a{:href => "pricing.html"} Pricing
+                %li
+                  %a{:href => "contact.html"} Contact
+          / end: Footer Menu Links
+          / start: Footer Menu Back To Top
+          .span1
+            #footer-menu-back-to-top
+              %a{:href => "#"}
+          / end: Footer Menu Back To Top
+        / end: Row
+      / end: Container
+    / end: Footer Menu
+    / start: Footer
+    #footer
+      / start: Container
+      .container
+        / start: Row
+        .row
+          / start: About
+          .span3
+            %h3 About Us
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          / end: About
+          / start: Photo Stream
+          .span3
+            %h3 Photo Stream
+            .flickr-widget
+              %script{:src => "http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=29609591@N08", :type => "text/javascript"}
+              .clear
+          / end: Photo Stream
+          .span6
+            / start: Follow Us
+            %h3 Follow Us!
+            %ul.social-grid
+              %li
+                .social-item
+                  .social-info-wrap
+                    .social-info
+                      .social-info-front.social-twitter
+                        %a{:href => "http://twitter.com"}
+                      .social-info-back.social-twitter-hover
+                        %a{:href => "http://twitter.com"}
+              %li
+                .social-item
+                  .social-info-wrap
+                    .social-info
+                      .social-info-front.social-facebook
+                        %a{:href => "http://facebook.com"}
+                      .social-info-back.social-facebook-hover
+                        %a{:href => "http://facebook.com"}
+              %li
+                .social-item
+                  .social-info-wrap
+                    .social-info
+                      .social-info-front.social-dribbble
+                        %a{:href => "http://dribbble.com"}
+                      .social-info-back.social-dribbble-hover
+                        %a{:href => "http://dribbble.com"}
+              %li
+                .social-item
+                  .social-info-wrap
+                    .social-info
+                      .social-info-front.social-flickr
+                        %a{:href => "http://flickr.com"}
+                      .social-info-back.social-flickr-hover
+                        %a{:href => "http://flickr.com"}
+            / end: Follow Us
+            / start: Newsletter
+            %form#newsletter
+              %h3 Newsletter
+              %p Please leave us your email
+              %label{:for => "newsletter_input"} @:
+              %input#newsletter_input{:type => "text"}/
+              %input#newsletter_submit{:type => "submit", :value => "submit"}
+            / end: Newsletter
+        / end: Row
+      / end: Container
+    / end: Footer
+    / start: Copyright
+    #copyright
+      / start: Container
+      .container
+        .span12
+          %p
+            \© 2012,
+            = succeed "." do
+              %a{:href => "http://clabs.co"} creativeLabs
+            Designed by
+            %a{:href => "http://clabs.co"} creativeLabs
+            in Poland
+            %img{:alt => "Poland", :src => "/assets/img/poland2.png", :style => "margin-top:-4px"}
+      / end: Container
+    / end: Copyright
+    / start: Java Script
+    / Placed at the end of the document so the pages load faster
+    %script{:src => "/assets/smart/jquery-1.8.2.js"}
+    %script{:src => "/assets/smart/bootstrap.js"}
+    %script{:src => "/assets/smart/isotope.js"}
+    %script{:src => "/assets/smart/jquery.imagesloaded.js"}
+    %script{:src => "/assets/smart/flexslider.js"}
+    %script{:src => "/assets/smart/carousel.js"}
+    %script{:src => "/assets/smart/jquery.cslider.js"}
+    %script{:src => "/assets/smart/slider.js"}
+    %script{:src => "/assets/smart/fancybox.js"}
+    %script{:defer => "defer", :src => "/assets/smart/custom.js"}
+    / end: Java Script
