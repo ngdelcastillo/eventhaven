@@ -17,7 +17,7 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 
 group :production do
   # Heroku needs to know the ruby version
-  # ruby '1.9.3'
+  ruby '1.9.3'
 end
 group :development do
   gem 'quiet_assets'
