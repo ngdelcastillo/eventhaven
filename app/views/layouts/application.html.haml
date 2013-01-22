@@ -1,7 +1,7 @@
 !!! 5
 %html(lang="en")
   %head
-    %title Gimika
+    %title EventHaven
     %meta{:charset => "UTF-8"}/
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -21,17 +21,21 @@
     %link{:href => "/assets/unicorn.main.css", :rel => "stylesheet"}/
     %link{:href => "/assets/base.css", :rel => "stylesheet"}/
     %link(href="favicon.ico" rel="shortcut icon")
-    %link.skin-color{:href => "/assets/unicorn.red.css", :rel => "stylesheet"}
+    %link.skin-color{:href => "/assets/unicorn.blue.css", :rel => "stylesheet"}
   %body
     #header
       %h1
-        %a{:href => "/"} Gimika
+        %a{:href => "/"} EventHaven
     #user-nav.navbar.navbar-inverse
       %ul.nav.btn-group
         %li.btn.btn-inverse
           %a{:href => "#", :title => ""}
             %i.icon.icon-user
             %span.text Profile
+        %li.btn.btn-inverse
+          = link_to destroy_user_session_path, :method=>'delete', :class => 'logout' do
+            %i.icon.icon-share-alt
+            %span.text Logout
     #sidebar
       = render :partial => "layouts/sidebar"
     #content

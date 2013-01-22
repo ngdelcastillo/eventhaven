@@ -3,10 +3,11 @@ class ApplicationController < ActionController::Base
   layout :vary_layout
 
   def vary_layout
-    if user_signed_in?
-      "application"
-    else
+    controller = params[:controller]
+    unless controller == "dashboard" && user_signed_in?
       "public"
+    else
+      "application"
     end
   end
 end

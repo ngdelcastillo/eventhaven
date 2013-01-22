@@ -1,8 +1,6 @@
 Gimika::Application.routes.draw do
-  get "dashboard/index"
-
   devise_for :users
-
+  get "dashboard/index"
   root :to => "home#index"
   get "home/index"
   # The priority is based upon order of creation:
