@@ -34,7 +34,7 @@
         /[if IE 9]
           <link href="/assets/smart/styleie9.css" rel="stylesheet">
         -# = stylesheet_link_tag "application", :media => "all"
-        %link{:href => "/assets/home.css", :rel => "stylesheet"}
+        %link{:href => "/assets/base.css", :rel => "stylesheet"}
   %body
     / start: Header
     %header
@@ -47,7 +47,7 @@
               %span.icon-bar
               %span.icon-bar
               %span.icon-bar
-            %a.brand{:href => "index.html"}
+            %a.brand{:href => "/"}
               %i.ico-charts.circle
               Event
               %span>Haven
@@ -91,6 +91,7 @@
         / end: Navbar
       / end: Container
     / end: Header
+    = bootstrap_flash
     = yield
     / start: Footer Menu
     #footer-menu.hidden-tablet.hidden-phone
