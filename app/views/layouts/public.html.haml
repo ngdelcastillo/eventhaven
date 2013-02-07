@@ -81,13 +81,14 @@
                         %li
                           %a{:href => "#"} Statistics
                 %li
-                  %a{:href => "#"} Pricing
-                %li
-                  %a{:href => "#"} Blog
-                %li
-                  %a{:href => "#"} Contact
-                %li.portal
-                  %a{:href => "/dashboard/index"} Dashboard
+                  #user_nav
+                    -if current_user
+                      Hi 
+                      %strong=current_user.nickname
+                      =link_to "Sign Out", signout_path, id: "sign_out"
+                    -else
+                      =link_to "Sign In", new_user_session_path, id: "sign_in"
+
         / end: Navbar
       / end: Container
     / end: Header

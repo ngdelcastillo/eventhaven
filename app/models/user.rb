@@ -13,9 +13,16 @@ class User
   ## Custom fields
   field :first_name
   field :last_name
-  field :role #admin, supplier, customer
-  field :profile_pic
-  field :bio
+  field :nickname
+  field :role #admin, manager, customer
+  field :image
+
+  # Facebook properties
+  field :provider
+  field :uid
+  field :oauth_token
+  field :oauth_expires_at, :type => DateTime
+  
   ## Database authenticatable
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""
@@ -50,4 +57,21 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+
+  ## METHODS
+  def self.from_omniauth(auth)
+    where(auth.slice(:provider, :uid)).find_or_initialize_by.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.nickname = auth.info.nickname
+      user.email = auth.info.email
+      user.first_name = auth.info.first_name
+      user.last_name = auth.info.last_name
+      user.image = auth.info.image
+      user.oauth_token = auth.credentials.token
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.password = "P@ssw0rd"
+      user.save!
+    end
+  end
 end

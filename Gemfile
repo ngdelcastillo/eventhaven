@@ -14,6 +14,7 @@ gem 'cancan'
 gem 'thin'
 gem 'twitter-bootstrap-rails'
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
+gem 'omniauth-facebook'
 
 group :production do
   # Heroku needs to know the ruby version

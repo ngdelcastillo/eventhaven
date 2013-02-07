@@ -22,6 +22,12 @@ Gimika::Application.routes.draw do
   get "home/index"
   get "home/index2"
   match "/directory" => "suppliers#index"
+
+  # Facebook callback routes
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

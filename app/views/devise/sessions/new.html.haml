@@ -3,6 +3,10 @@
     = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "form-horizontal"}) do |f|
       %fieldset.control-group
         = devise_error_messages!
+        %legend Sign in Facebook
+        .control-group
+          .controls
+            =link_to "Log in with Facebook", "/auth/facebook", class: "btn btn-primary"
         %legend Sign in
         .control-group
           = f.label :email, :class => "control-label"
