@@ -7,5 +7,5 @@ class Price
   field :details, type: String
 
   #Relationships
-  belongs_to :supplier
+  belongs_to :service
 end

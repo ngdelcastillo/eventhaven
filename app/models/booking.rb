@@ -9,6 +9,6 @@ class Booking
   field :comment, type: String
 
   #Relationships
-  belongs_to :supplier
+  belongs_to :service
   has_one :event
 end

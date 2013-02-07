@@ -1,4 +1,10 @@
 Gimika::Application.routes.draw do
+  resources :service_types
+
+
+  resources :services
+
+
   resources :members
   resources :managers
   resources :supplier_types
@@ -8,9 +14,8 @@ Gimika::Application.routes.draw do
   resources :events
   resources :bookings
   resources :prices
-  resources :groups
-  resources :suppliers
-
+  resources :groups  
+  
   devise_for :users
   get "dashboard/index"
   root :to => "home#index"
