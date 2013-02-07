@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Offer:
+  = @price.offer
+%p
+  %b Amount:
+  = @price.amount
+%p
+  %b Currency:
+  = @price.currency
+%p
+  %b Details:
+  = @price.details
+
+= link_to 'Edit', edit_price_path(@price)
+\|
+= link_to 'Back', prices_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Rating:
+  = @customer.rating
+%p
+  %b Comment:
+  = @customer.comment
+
+= link_to 'Edit', edit_customer_path(@customer)
+\|
+= link_to 'Back', customers_path

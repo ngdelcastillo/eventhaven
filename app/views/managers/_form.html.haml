@@ -1,0 +1,16 @@
+= form_for @manager do |f|
+  - if @manager.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@manager.errors.count, "error")} prohibited this manager from being saved:"
+      %ul
+        - @manager.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :assigned_by
+    = f.text_field :assigned_by
+  .field
+    = f.label :assigned_on
+    = f.date_select :assigned_on
+  .actions
+    = f.submit 'Save'

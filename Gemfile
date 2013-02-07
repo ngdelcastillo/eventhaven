@@ -4,7 +4,7 @@ gem 'rails', '3.2.9'
 gem 'jquery-rails'
 gem 'mongoid'
 gem 'bson_ext'
-gem 'inherited_resources'
+# gem 'inherited_resources'
 gem 'has_scope'
 gem 'rspec-rails', :group => [:test, :development]
 gem 'haml'

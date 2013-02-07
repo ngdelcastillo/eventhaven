@@ -1,0 +1,21 @@
+%h1 Listing supplier_types
+
+%table
+  %tr
+    %th Name
+    %th Details
+    %th
+    %th
+    %th
+
+  - @supplier_types.each do |supplier_type|
+    %tr
+      %td= supplier_type.name
+      %td= supplier_type.details
+      %td= link_to 'Show', supplier_type
+      %td= link_to 'Edit', edit_supplier_type_path(supplier_type)
+      %td= link_to 'Destroy', supplier_type, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Supplier type', new_supplier_type_path

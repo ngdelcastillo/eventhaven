@@ -1,8 +1,22 @@
 Gimika::Application.routes.draw do
+  resources :members
+  resources :managers
+  resources :supplier_types
+  resources :event_types
+  resources :subscriptions
+  resources :customers
+  resources :events
+  resources :bookings
+  resources :prices
+  resources :groups
+  resources :suppliers
+
   devise_for :users
   get "dashboard/index"
   root :to => "home#index"
   get "home/index"
+  get "home/index2"
+  match "/directory" => "suppliers#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

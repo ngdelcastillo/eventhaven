@@ -1,0 +1,21 @@
+%h1 Listing managers
+
+%table
+  %tr
+    %th Assigned by
+    %th Assigned on
+    %th
+    %th
+    %th
+
+  - @managers.each do |manager|
+    %tr
+      %td= manager.assigned_by
+      %td= manager.assigned_on
+      %td= link_to 'Show', manager
+      %td= link_to 'Edit', edit_manager_path(manager)
+      %td= link_to 'Destroy', manager, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Manager', new_manager_path

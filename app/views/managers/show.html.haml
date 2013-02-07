@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Assigned by:
+  = @manager.assigned_by
+%p
+  %b Assigned on:
+  = @manager.assigned_on
+
+= link_to 'Edit', edit_manager_path(@manager)
+\|
+= link_to 'Back', managers_path

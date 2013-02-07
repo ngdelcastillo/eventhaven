@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Assigned by:
+  = @member.assigned_by
+%p
+  %b Assigned on:
+  = @member.assigned_on
+
+= link_to 'Edit', edit_member_path(@member)
+\|
+= link_to 'Back', members_path

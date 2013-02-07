@@ -1,0 +1,25 @@
+%h1 Listing prices
+
+%table
+  %tr
+    %th Offer
+    %th Amount
+    %th Currency
+    %th Details
+    %th
+    %th
+    %th
+
+  - @prices.each do |price|
+    %tr
+      %td= price.offer
+      %td= price.amount
+      %td= price.currency
+      %td= price.details
+      %td= link_to 'Show', price
+      %td= link_to 'Edit', edit_price_path(price)
+      %td= link_to 'Destroy', price, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Price', new_price_path
