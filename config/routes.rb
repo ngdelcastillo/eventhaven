@@ -21,7 +21,7 @@ Gimika::Application.routes.draw do
   root :to => "home#index"
   get "home/index"
   get "home/index2"
-  match "/directory" => "suppliers#index"
+  match "/directory" => "services#index"
 
   # Facebook callback routes
   match 'auth/:provider/callback', to: 'sessions#create'

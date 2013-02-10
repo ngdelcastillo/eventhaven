@@ -3,14 +3,20 @@ class ApplicationController < ActionController::Base
   layout :vary_layout
 
   def vary_layout
-    # controller = params[:controller]
-    # unless controller == "dashboard" && user_signed_in?
+    controller = params[:controller]
+    unless controller == "dashboard" && user_signed_in?
       "public"
-    # else
-    #   "application"
-    # end
+    else
+      "application"
+    end
   end
 
+  def check_user
+    unless current_user
+      authenticate_user!
+    end
+  end
+  
   private
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
