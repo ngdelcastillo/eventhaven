@@ -2,6 +2,7 @@ class Booking
   include Mongoid::Document
   include Mongoid::Timestamps
   field :offset, type: Integer
+  field :supply, type: Integer
   field :status, type: Integer #BookingStatus: 0 - Pending, 1 - Approved, 2 - Denied, 3 - Close
   
   # Customer is the one that comments here
